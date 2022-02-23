@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figuras geom&eacute;tricas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto:ital,wght@0,100;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./figuras.css" />
+  </head>
+  <body>
+    <h1>Figuras geom&eacute;tricas</h1>
+
+    <section>
+      <article class="figures-container">
+        <div class="figures-title">
+          <img src="../assets/cuadrado_sm.png" alt="cuadrado" />
+          <h2>Cuadrado</h2>
+        </div>
+        <form>
+          <label for="cuatrado-lado"></label>
+          <input
+            type="number"
+            name="cuatrado-lado"
+            id="cuatrado-lado"
+            placeholder="Lado del cuadrado"
+            class="input"
+          />
+          <p>
+            <span>Perimetro: </span>
+            <span id="perimetro-cuadrado"> </span>
+            <br />
+            <span>&Aacute;rea: </span>
+            <span id="area-cuadrado"> </span>
+          </p>
+          <button
+            type="button"
+            onclick="onClickCuadrado()"
+            class="primary-button"
+          >
+            Calcular
+          </button>
+        </form>
+      </article>
+
+      <article class="figures-container">
+        <div class="figures-title">
+          <img src="../assets/triangulo_md.png" alt="Triangulo" />
+          <h2>Tri&aacute;ngulo</h2>
+        </div>
+        <form>
+          <label for="ladoA"></label>
+          <input
+            type="number"
+            name="ladoA"
+            id="ladoA"
+            class="input"
+            placeholder="Lado A"
+          />
+
+          <label for="ladoB"></label>
+          <input
+            type="number"
+            name="ladoB"
+            id="ladoB"
+            class="input"
+            placeholder="Lado B"
+          />
+
+          <label for="base"></label>
+          <input
+            type="number"
+            name="base"
+            id="base"
+            class="input"
+            placeholder="Base"
+          />
+          <label for="altura"></label>
+          <input
+            type="number"
+            name="altura"
+            id="altura"
+            class="input"
+            placeholder="Altura"
+          />
+
+          <p>
+            <span>Perimetro: </span>
+            <span id="perimetro-triangulo"> </span>
+            <br />
+            <span>&Aacute;rea: </span>
+            <span id="area-triangulo"> </span>
+          </p>
+
+          <button
+            type="button"
+            class="primary-button"
+            onclick="onClickTriangulo()"
+          >
+            Calcular
+          </button>
+        </form>
+      </article>
+
+      <article class="figures-container">
+        <div class="figures-title">
+          <img src="../assets/circule_sm.png" alt="circulo" >
+          <h2>C&iacute;rculo</h2>
+        </div>
+        <form>
+          <label for="radio"></label>
+          <input
+            type="number"
+            name="radio"
+            id="radio"
+            placeholder="radio"
+            class="input"
+          />
+          <p>
+            <span>Perimetro: </span>
+            <span id="perimetro-circulo"> </span>
+            <br />
+            <span>&Aacute;rea: </span>
+            <span id="area-circulo"> </span>
+          </p>
+          <button
+            type="button"
+            onclick="onClickCirculo()"
+            class="primary-button"
+          >
+            Calcular
+          </button>
+        </form>
+      </article>
+    </section>
+    <script src="./figuras.js"></script>
+  </body>
+</html>
