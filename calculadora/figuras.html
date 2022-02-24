@@ -15,10 +15,13 @@
     <link rel="stylesheet" href="./figuras.css" />
   </head>
   <body>
-    <h1>Figuras geom&eacute;tricas</h1>
+    <div class="figures-title">
+      <img src="../assets//figuras_md.png" alt="Figuras" />
+      <h1 class="title">Figuras geom&eacute;tricas</h1>
+    </div>
 
     <section>
-      <article class="figures-container">
+      <article class="figures-container cuadrado">
         <div class="figures-title">
           <img src="../assets/cuadrado_sm.png" alt="cuadrado" />
           <h2>Cuadrado</h2>
@@ -46,10 +49,17 @@
           >
             Calcular
           </button>
+          <button
+            type="button"
+            onclick="onClickLimpiarCuadrado()"
+            class="secondary-button"
+          >
+            Limpiar
+          </button>
         </form>
       </article>
 
-      <article class="figures-container">
+      <article class="figures-container triangulo">
         <div class="figures-title">
           <img src="../assets/triangulo_md.png" alt="Triangulo" />
           <h2>Tri&aacute;ngulo</h2>
@@ -105,12 +115,19 @@
           >
             Calcular
           </button>
+          <button
+            type="button"
+            onclick="onClickLimpiarTriangulo()"
+            class="secondary-button"
+          >
+            Limpiar
+          </button>
         </form>
       </article>
 
-      <article class="figures-container">
+      <article class="figures-container circulo">
         <div class="figures-title">
-          <img src="../assets/circule_sm.png" alt="circulo" >
+          <img src="../assets/circule_sm.png" alt="circulo" />
           <h2>C&iacute;rculo</h2>
         </div>
         <form>
@@ -134,11 +151,31 @@
             onclick="onClickCirculo()"
             class="primary-button"
           >
-            Calcular
+            Calcular</button
+          ><button
+            type="button"
+            onclick="onClickLimpiarCirculo()"
+            class="secondary-button"
+          >
+            Limpiar
           </button>
         </form>
       </article>
     </section>
+
+    <footer class="footer">
+      <section class="social_media">
+        <a href="http://github.com/pahoalapizco/practico-js" target="__blank">
+          <i class="fab fa-github fcolor"></i>
+          GitHub
+        </a>
+      </section>
+      <section class="love">
+        <p>Con amor! By Pahoalapizco</p>
+      </section>
+    </footer>
+
     <script src="./figuras.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   </body>
 </html>
