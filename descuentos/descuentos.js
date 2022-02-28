@@ -11,14 +11,14 @@ const cupones = [
     }
 ]
 // Calcular descuneto:
-const calcularDescuneto = (precio, descuento) => ((precio * (100 - descuento)) / 100);
+const calcularDescuento = (precio, descuento) => ((precio * (100 - descuento)) / 100);
 // console.log(calcularDescuneto(120, 15));
 
 const carcularDescuentoCupon = (precio, cuponDescuento) => {
     const descuentoCupon = cupones.find(cupon => cupon.name === cuponDescuento && cupon.discount);
     let precioConDescuento;
     if(descuentoCupon){
-        precioConDescuento = calcularDescuneto(precio, descuento);
+        precioConDescuento = calcularDescuento(precio, descuento);
     } else {
         console.log('El cupon no existe')
     } 
@@ -27,4 +27,31 @@ const carcularDescuentoCupon = (precio, cuponDescuento) => {
     return precioConDescuento;
 }
 
-console.log(carcularDescuentoCupon(120, 'CUPONDOS'))
+const onClickCalcularDescuento = () => {
+    // Inputs
+    const inputPrecio = document.getElementById("precio");
+    const inputDescuento = document.getElementById("porcentaje");
+
+    // Values
+    const precioValue = inputPrecio.value;
+    const descuentoValue = inputDescuento.value;
+
+    // Spans
+    const spanPrecioConDescuento = document.getElementById("descuento-total");
+
+    const descuentoTotal = calcularDescuento(precioValue, descuentoValue);
+
+    spanPrecioConDescuento.innerText = `$ ${descuentoTotal}`;
+}
+
+const onClickLimpiar = () => {
+    // Inputs
+    const inputPrecio = document.getElementById("precio");
+    const inputDescuento = document.getElementById("porcentaje");
+    // Spans
+    const spanPrecioConDescuento = document.getElementById("descuento-total");
+
+    inputPrecio.value = "";
+    inputDescuento.value = "";
+    spanPrecioConDescuento.innerText = "$ 0";
+}
