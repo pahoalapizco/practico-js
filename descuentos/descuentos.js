@@ -1,12 +1,12 @@
 const cupones = [
     {
-        name: "CUPONUNO",
+        name: "DESCUENTO HTML",
         discount: 10,        
     }, {
-        name: "CUPONDOS",
+        name: "DESCUENTO CSS",
         discount: 15,
     }, {        
-        name: "CUPONTRES",
+        name: "DESCUENTO JS",
         discount: 20
     }
 ]
@@ -20,7 +20,7 @@ const carcularDescuentoCupon = (precio, cuponDescuento) => {
     if(descuentoCupon){
         precioConDescuento = calcularDescuento(precio, descuento);
     } else {
-        console.log('El cupon no existe')
+        precioConDescuento = 0;
     } 
     
 
@@ -31,11 +31,18 @@ const onClickCalcularDescuento = () => {
     // Inputs
     const inputPrecio = document.getElementById("precio");
     const inputDescuento = document.getElementById("porcentaje");
-
+    const selectCupones = document.getElementById("cupones");
     // Values
-    const precioValue = inputPrecio.value;
-    const descuentoValue = inputDescuento.value;
+    const cuponValue = selectCupones.value;
+    const precioValue = parseInt(inputPrecio.value);
+    let descuentoValue = 0;
 
+    if(cuponValue!== "") {
+        inputDescuento.value = cuponValue;
+        descuentoValue = parseInt(cuponValue);
+      } else {
+      descuentoValue = parseInt(inputDescuento.value);
+    }
     // Spans
     const spanPrecioConDescuento = document.getElementById("descuento-total");
 
@@ -48,10 +55,12 @@ const onClickLimpiar = () => {
     // Inputs
     const inputPrecio = document.getElementById("precio");
     const inputDescuento = document.getElementById("porcentaje");
+    const selectCupones = document.getElementById("cupones");
     // Spans
     const spanPrecioConDescuento = document.getElementById("descuento-total");
 
     inputPrecio.value = "";
     inputDescuento.value = "";
+    selectCupones.value = "";
     spanPrecioConDescuento.innerText = "$ 0";
 }
