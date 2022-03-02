@@ -24,6 +24,10 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+main {
+  height: 95vh;
+}
+
 .title-container {
   display: flex;
   justify-content: center;
@@ -33,6 +37,14 @@ body {
 
 .title {
   display: none;
+}
+
+.section-container {
+  border-radius: 0.8rem;
+  box-shadow: 0.3rem 0.5rem 0.5rem 0.5rem var(--very-light-pink);
+  padding: 2rem 2.5rem;
+  width: 80vw;
+  height: auto;
 }
 
 .input {
@@ -68,6 +80,19 @@ body {
   height: 4rem;
   margin-top: 1.5rem;
 }
+
+.text-container {
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-container span:last-child {
+  font-weight: bold;
+  font-size: var(--lg);
+}
+
 .footer {
   width: 100vw;
   display: flex;

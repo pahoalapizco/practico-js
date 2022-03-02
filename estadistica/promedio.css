@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  height: 95vh;
+}
+
+textarea {
+  resize: none;
+  height: 20rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--text-input-field);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}

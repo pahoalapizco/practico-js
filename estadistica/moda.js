@@ -1,5 +1,3 @@
-const lista = [1, 2, 2, 2, 3, 3, 4, 1];
-
 const calcularModa = (lista) => {
   const listaCount = {};
 
@@ -18,5 +16,3 @@ const calcularModa = (lista) => {
 
   return moda;
 };
-
-console.log("🚀 ~ file: moda.js ~ line 3 ~ listaCount", calcularModa(lista));

@@ -1,5 +1,3 @@
-const lista = [500, 5000000, 100, 200, 4000000];
-
 const calcularPromedio = (lista) => {
   const suma = lista.reduce(
     (valorAcumulado = 0, valorElemento) => valorAcumulado + valorElemento
@@ -26,5 +24,3 @@ const calcualrMedia = (lista) => {
   }
   return media;
 };
-
-console.log(`Media: ${calcualrMedia(lista)}`);
