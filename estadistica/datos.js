@@ -4,7 +4,7 @@ const aleatorio = (min, max) => {
   return min + aleatorio;
 }
 
-const listaAleatoria = (min, max) => {
+const listaAleatoria = (min = 1, max = 100) => {
   const lista = [];
   
   for(let i =0; i < 100; i++) {

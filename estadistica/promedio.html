@@ -26,8 +26,8 @@
       <section class="section-container">
         <form action="">
 
-          <label for="lista-promedios">Tipo de c&aacute;lculo</label>
-          <select name="lista-promedios" id="lista-promedios" class="input">
+          <label for="tipo-calculo">Tipo de c&aacute;lculo</label>
+          <select name="tipo-calculo" id="tipo-calculo" class="input">
             <option value="promedio" selected>Promedio</option>
             <option value="media">Media</option>
             <option value="moda">Moda</option>
@@ -41,8 +41,8 @@
             <span id="resultado"> </span>
           </p>
 
-          <button type="button" class="primary-button"> Calcular </button>
-          <button type="button" class="secondary-button"> Limpiar </button>
+          <button type="button" class="primary-button" onclick="onClickCalcular()"> Calcular </button>
+          <button type="button" class="secondary-button" onclick="onClickLimpiar()"> Limpiar </button>
         </form>
       </section>
 
@@ -60,8 +60,9 @@
     </footer>
 
     <script src="./datos.js"></script>
-    <script src="./moda.js"></script>
     <script src="./media.js"></script>
+    <script src="./moda.js"></script>
+    <script src="./stats.js"></script>
     <script
       src="https://kit.fontawesome.com/2c36e9b7b1.js"
       crossorigin="anonymous"
