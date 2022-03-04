@@ -6,7 +6,7 @@ body {
 }
 
 main {
-  height: 95vh;
+  height: 85vh;
 }
 
 textarea {
@@ -31,4 +31,5 @@ textarea {
   main section:last-child {
     width: 60%;
   }
+
 }
