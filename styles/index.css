@@ -31,10 +31,9 @@ body {
 }
 
 .calculadora:hover {
-  width: 21rem;
   color: var(--hospital-green);
   box-shadow: 0.3rem 0.5rem 0.5rem 0.5rem var(--very-light-pink);
-  cursor: pointer;
+  cursor: pointer; 
 }
 
 .calculadora img {
