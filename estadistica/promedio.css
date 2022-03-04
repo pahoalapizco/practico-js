@@ -5,10 +5,6 @@ body {
   align-items: center;
 }
 
-main {
-  height: 85vh;
-}
-
 textarea {
   resize: none;
   height: 20rem;
